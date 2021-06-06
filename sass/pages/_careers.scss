@@ -1,0 +1,17 @@
+.careers {
+  margin-bottom: 16rem;
+
+  &__ul {
+    list-style: none;
+  }
+
+  &__list {
+    background-color: $color-snow;
+    padding: 3.5rem 6.4rem 3.5rem 4rem;
+    @extend %jsb;
+
+    &:not(:last-child) {
+      margin-bottom: 2.4rem;
+    }
+  }
+}

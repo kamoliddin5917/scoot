@@ -1,0 +1,123 @@
+.p {
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: normal;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+
+  &--section1 {
+    margin-bottom: 4rem;
+  }
+
+  &--card-text {
+    color: $color-dim-grey;
+    display: block;
+  }
+
+  &--box {
+    margin-top: 2.4rem;
+    margin-bottom: 4rem;
+    color: $color-dim-grey;
+  }
+
+  &--box-about {
+    display: inline-block;
+    color: $color-dim-grey;
+  }
+
+  &--card-about {
+    color: $color-dim-grey;
+    margin-top: 2.4rem;
+    display: none;
+  }
+
+  &--careers {
+    color: $color-dark-navy;
+  }
+
+  &--location {
+    width: 44.5rem;
+    color: $color-dim-grey;
+  }
+}
+
+.h1 {
+  font-weight: bold;
+  font-size: 5.6rem;
+  line-height: 5.6rem;
+  letter-spacing: -2.5px;
+  width: 50rem;
+  margin-top: 0;
+  margin-bottom: 0;
+
+  &--home {
+    margin-bottom: 4rem;
+  }
+}
+
+.h2 {
+  font-weight: bold;
+  font-size: 4.8rem;
+  line-height: 4.8rem;
+  letter-spacing: -2.14286px;
+  color: $color-dark-navy;
+
+  &--footer {
+    width: 41.5rem;
+    color: $color-white;
+  }
+
+  &--about-section4 {
+    text-align: center;
+  }
+
+  &--location {
+    width: 35.1rem;
+  }
+}
+
+.h3 {
+  font-weight: bold;
+  font-size: 4rem;
+  line-height: 4.8rem;
+  letter-spacing: -1.78571px;
+  color: $color-dark-navy;
+  width: 35rem;
+}
+
+.h4 {
+  font-weight: bold;
+  font-size: 2.4rem;
+  line-height: 2.8rem;
+  letter-spacing: -1.07143px;
+  color: $color-dark-navy;
+
+  &--card-title {
+    margin-bottom: 2.7rem;
+    display: block;
+  }
+
+  &--box-about {
+    display: block;
+    margin-bottom: 2.4rem;
+  }
+
+  &--card-about {
+    @extend %jsb;
+    width: 100%;
+
+    &::after {
+      @include badimg(1.6rem, .8rem, "../images/arrow.png", 1.6rem .8rem) {
+
+        @media only screen and(min-resolution:192dpi)and(min-width:376px),
+        (min-width:2000px) {
+          background-image: url(../images/arrow@2x.png);
+        }
+      }
+
+    }
+  }
+
+  &--careers {
+    margin-bottom: 0.8rem;
+  }
+}

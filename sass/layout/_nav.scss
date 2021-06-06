@@ -1,0 +1,24 @@
+.navbar {
+  margin-left: 5.8rem;
+  margin-right: auto;
+
+  &__ul {
+    @extend %aligncenter;
+    list-style: none;
+    margin-bottom: 0;
+    padding-left: 0;
+
+  }
+
+  &__list:not(:first-child) {
+    margin-left: 3.2rem;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $color-dim-grey;
+    font-weight: bold;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+  }
+}

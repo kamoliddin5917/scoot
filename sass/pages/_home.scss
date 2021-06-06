@@ -1,0 +1,62 @@
+body {
+  color: $color-white;
+  background-color: $color-bg;
+}
+
+// MAIN 
+
+// SECTION 1
+
+.section1 {
+  background: url(../images/circle-2.png), url(../images/circle.png), url(../images/circle.png), linear-gradient(rgba(73, 85, 103, .7), rgba(73, 85, 103, .7)), url(../images/bg-scooter.png);
+  background-repeat: no-repeat;
+  background-size: 6.2rem 6.2rem, 6.2rem 6.2rem, 6.2rem 6.2rem, cover, cover;
+  // background-position: calc(50% + 690px) calc(100% - 162px), calc(50% + calc(690px - calc(62px + 24px))) calc(100% - 162px),
+  //   calc(50% + calc(690px - calc(calc(62px + 24px) * 2))) calc(100% - 162px),
+  //   center,
+  //   right bottom;
+  background-position: calc(100% + 4.8rem) calc(100% - 162px),
+    calc(100% - 3.8rem) calc(100% - 162px),
+    calc(100% - 12.4rem) calc(100% - 162px),
+    center,
+    right bottom;
+  padding: 15.3rem 0 15.2rem 0;
+
+  @media only screen and(min-resolution:192dpi)and(min-width:376px),
+  (min-width:2000px) {
+    background-image: url(../images/circle-2@2x.png), url(../images/circle@2x.png), url(../images/circle@2x.png), linear-gradient(rgba(73, 85, 103, .7), rgba(73, 85, 103, .7)), url(../images/bg-scooter@2x.png);
+  }
+
+  &__text {
+    box-sizing: content-box;
+    width: 40.5rem;
+    padding: 0 4rem 0 5.7rem;
+    margin-left: 4rem;
+
+    position: relative;
+
+    &::before {
+      @include ba(100%, 1.5rem) {
+        background-color: $color-yellow;
+
+        position: absolute;
+        right: 100%;
+        top: 5.5rem;
+      }
+    }
+
+    &::after {
+      @include badimg(45rem, 14rem, '../images/arrow-right.png', 45rem 14rem) {
+        position: absolute;
+        bottom: 0;
+        left: 100%;
+
+        @media only screen and(min-resolution:192dpi)and(min-width:376px),
+        (min-width:2000px) {
+          background-image: url(../images/arrow-right@2x.png);
+        }
+      }
+    }
+
+  }
+}

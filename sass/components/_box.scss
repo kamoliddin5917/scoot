@@ -1,0 +1,177 @@
+.box {
+  margin-bottom: 14rem;
+
+  &__list {
+    padding: 6.6rem 0;
+    background-image: url(../images/arrow-left.png), url(../images/jek.png), url(../images/circle-spare.png);
+    background-size: 74rem 14rem, 44.5rem 44.5rem, 44.5rem 44.5rem;
+    background-position: right bottom, calc(100% - 16.5rem) center, calc(100% + calc(44.5rem - 10.1rem)) center;
+    background-repeat: no-repeat;
+
+    @media only screen and(min-resolution:192dpi)and(min-width:376px),
+    (min-width:2000px) {
+      background-image: url(../images/arrow-left@2x.png),
+        url(../images/jek@2x.png),
+        url(../images/circle-spare@2x.png);
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 16rem;
+    }
+
+    &:nth-child(2) {
+      background-image: url(../images/arrow-right.png), url(../images/shahar.png), url(../images/circle-spare.png);
+      background-size: 44.6rem 14rem, 44.5rem 44.5rem, 44.5rem 44.5rem;
+      background-position: calc(0% - 9rem) top, calc(0% + 16.5rem) center, calc(0% - calc(44.5rem - 10.1rem)) center;
+      background-repeat: no-repeat;
+
+      @media only screen and(min-resolution:192dpi)and(min-width:376px),
+      (min-width:2000px) {
+        background-image: url(../images/arrow-right@2x.png),
+          url(../images/shahar@2x.png),
+          url(../images/circle-spare@2x.png);
+      }
+
+    }
+
+    &:nth-child(3) {
+      background-image: url(../images/arrow-left.png),
+        url(../images/jek-many.png),
+        url(../images/circle-spare.png);
+      background-size: 74rem 14rem,
+        44.5rem 44.5rem,
+        44.5rem 44.5rem;
+      background-position: calc(100% + 38rem) calc(0% + 9rem),
+        calc(100% - 16.5rem) center,
+        calc(100% + calc(44.5rem - 10.1rem)) center;
+      background-repeat: no-repeat;
+
+      @media only screen and(min-resolution:192dpi)and(min-width:376px),
+      (min-width:2000px) {
+        background-image: url(../images/arrow-left@2x.png),
+          url(../images/jek-many@2x.png),
+          url(../images/circle-spare@2x.png);
+      }
+
+
+    }
+
+    &-about-1 {
+      padding: 12.5rem 0;
+      background-image: url(../images/arrow-left-2.png),
+        url(../images/malika.png),
+        url(../images/circle-spare.png);
+    }
+
+    &-about-2 {
+      padding: 12.5rem 0;
+      background-image: url(../images/arrow-right.png),
+        url(../images/bus.png),
+        url(../images/circle-spare.png) !important;
+    }
+
+    &-careers {
+      background-image: url(../images/arrow-left.png),
+        url(../images/jek-and-malika.png),
+        url(../images/circle-spare.png);
+
+      @media only screen and(min-resolution:192dpi)and(min-width:376px),
+      (min-width:2000px) {
+        background-image: url(../images/arrow-left@2x.png),
+          url(../images/jek-and-malika@2x.png),
+          url(../images/circle-spare@2x.png);
+      }
+    }
+  }
+
+
+  &__text {
+    width: 44.5rem;
+
+    &-2 {
+      margin-left: auto;
+    }
+  }
+
+  &-about {
+    @extend %jsb;
+    margin-top: 10.3rem;
+    margin-bottom: 12rem;
+
+    &__list {
+      width: 35rem;
+      list-style: none;
+    }
+
+    &__link {
+      text-decoration: none;
+      display: inline-block;
+
+      position: relative;
+
+      &::before {
+        @include badimg(24rem, 24rem, "../images/phone-2.png", 24rem 24rem) {
+          margin-bottom: 8.7rem;
+
+          @media only screen and(min-resolution:192dpi)and(min-width:376px),
+          (min-width:2000px) {
+            background-image: url(../images/phone-2@2x.png);
+          }
+        }
+      }
+
+      &::after {
+        content: "01";
+        width: 9.6rem;
+        height: 9.6rem;
+        border-radius: 50%;
+        background-color: $color-yellow;
+
+
+        font-weight: bold;
+        font-size: 2.4rem;
+        line-height: 2.8rem;
+        text-align: center;
+        letter-spacing: -1.07143px;
+        color: $color-dark-navy;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        position: absolute;
+        top: 19.9rem;
+        right: calc(50% - 4.8rem);
+      }
+
+      &-2 {
+        &::before {
+          background-image: url(../images/scooter-2.png);
+
+          @media only screen and(min-resolution:192dpi)and(min-width:376px),
+          (min-width:2000px) {
+            background-image: url(../images/scooter-2@2x.png);
+          }
+        }
+
+        &::after {
+          content: "02";
+        }
+      }
+
+      &-3 {
+        &::before {
+          background-image: url(../images/peoples.png);
+
+          @media only screen and(min-resolution:192dpi)and(min-width:376px),
+          (min-width:2000px) {
+            background-image: url(../images/peoples@2x.png);
+          }
+        }
+
+        &::after {
+          content: "03";
+        }
+      }
+    }
+  }
+}

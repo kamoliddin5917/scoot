@@ -1,0 +1,68 @@
+.footer {
+  &__top {
+    padding: 10.2rem 0;
+    background-color: $color-dark-navy;
+    background-image: url(../images/bg-footer.png);
+    background-repeat: no-repeat;
+    background-size: calc(115.3rem - 16.3rem) 15rem;
+    background-position: right bottom;
+
+    @media only screen and(min-resolution:192dpi)and(min-width:376px),
+    (min-width:2000px) {
+      background-image: url(../images/bg-footer@2x.png);
+    }
+
+    & .container {
+      @extend %jsb;
+    }
+  }
+
+  &__imgs {
+    @extend %aligncenter;
+  }
+
+  &__img {
+    display: inline-block;
+
+    &:not(:last-child) {
+      margin-right: 1.8rem;
+    }
+
+    &-app {
+      display: inline-block;
+      width: 15.9rem;
+      height: 5.6rem;
+    }
+
+    &-google {
+      display: inline-block;
+      width: 18.2rem;
+      height: 5.6rem;
+    }
+  }
+
+  &__bottom {
+    background-color: #333A44;
+    padding: 3.5rem 0;
+
+    & .container {
+      @extend %aligncenter;
+    }
+
+    &-img {
+      display: inline-block;
+      text-decoration: none;
+
+      &:not(:last-child) {
+        margin-right: 2.4rem;
+      }
+
+    }
+  }
+}
+
+.icon {
+  width: 2.4rem;
+  height: 2.4rem;
+  color: $color-yellow;
+}

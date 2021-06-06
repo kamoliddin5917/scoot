@@ -1,4 +1,5 @@
 // Abstracts
+@import './abstracts/fonts';
 @import './abstracts/variables';
 @import './abstracts/utils';
 @import './abstracts/mixins';
@@ -12,6 +13,7 @@
 // COMPONENTS
 @import './components/btn';
 @import './components/card';
+@import './components/box';
 @import './components/dropdown';
 
 // LAYOUT
@@ -24,7 +26,8 @@
 // PAGES
 @import './pages/home';
 @import './pages/about';
-@import './pages/contact';
+@import './pages/careers';
+@import './pages/locations';
 
 // THEMES
 @import './themes/theme';

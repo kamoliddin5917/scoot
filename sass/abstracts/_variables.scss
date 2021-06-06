@@ -9,15 +9,25 @@
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
+  font-size: 62.5%; // 16px % 62.5 = 10px
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Space Mono', sans-serif;
 }
 
 .container {
   max-width: 1140px;
   margin-right: auto;
   margin-left: auto;
-  padding: 0 20px;
+  padding: 0 18px;
 }
+
+$color-yellow:#FCB72B;
+$color-dark-navy:#495567;
+$color-dim-grey: #939CAA;
+$color-light-grey:#E5ECF4;
+$color-snow:#F2F5F9;
+$color-light-yellow: #FFF4DF;
+$color-white:#fff;
+$color-bg:#f2f2f2;

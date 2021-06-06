@@ -1,0 +1,44 @@
+.about {
+  &-section1 {
+    padding: 7.2rem 0;
+    margin-bottom: 12rem;
+    background: url(../images/circle-2.png),
+      url(../images/circle.png),
+      url(../images/circle.png),
+      linear-gradient(rgba(73, 85, 103, .7), rgba(73, 85, 103, .7)),
+      url(../images/bg-about.png);
+    background-repeat: no-repeat;
+    background-size: 6.2rem 6.2rem,
+      6.2rem 6.2rem,
+      6.2rem 6.2rem,
+      cover,
+      cover;
+    background-position: calc(100% + 4.8rem) center,
+      calc(100% - 3.8rem) center,
+      calc(100% - 12.4rem) center,
+      center,
+      center;
+
+    @media only screen and(min-resolution:192dpi)and(min-width:376px),
+    (min-width:2000px) {
+      background-image: url(../images/circle-2@2x.png), url(../images/circle@2x.png), url(../images/circle@2x.png), linear-gradient(rgba(73, 85, 103, .7), rgba(73, 85, 103, .7)), url(../images/bg-about@2x.png);
+    }
+  }
+
+  &-section3 {
+    text-align: center;
+  }
+
+  // SECTION 4
+
+  &-section4 {
+    margin-bottom: 16rem;
+
+    &__text {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-top: 6.4rem;
+    }
+  }
+}

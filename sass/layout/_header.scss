@@ -1,0 +1,18 @@
+.header {
+  padding: 2.1rem 0;
+  background-color: $color-white;
+
+  & .container {
+    @extend %aligncenter;
+  }
+}
+
+.logo {
+  color: $color-dark-navy;
+  width: 17.8rem;
+  height: 3.5rem;
+
+  &__footer {
+    color: $color-white;
+  }
+}
