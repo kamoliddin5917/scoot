@@ -8,14 +8,57 @@
   background-color: $color-yellow;
   color: inherit;
   border: 3px solid transparent;
+  transition: all .2s ease-in-out;
+
+  &:hover {
+    border: 3px solid $color-yellow;
+    background-color: transparent;
+    color: $color-yellow;
+  }
+
+  &--modal {
+    display: inline-block;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    padding: 1.4rem 3.9rem;
+    background-color: $color-yellow;
+    color: inherit;
+    border: 3px solid transparent;
+    transition: all .2s ease-in-out;
+
+    &:hover {
+      border: 3px solid $color-yellow;
+      background-color: transparent;
+      color: $color-yellow;
+    }
+  }
+
+  &--header {
+    @include respond(phone) {
+      display: none;
+    }
+  }
 
   &--careers {
     padding: 1.4rem 6.6rem;
+
+    @include respond(phone) {
+      width: 100%;
+      margin-top: 1.6rem;
+    }
   }
 
   &--location {
     position: relative;
     color: $color-dark-navy;
+
+    &:not(:last-child) {
+      @include respond(phone) {
+        margin-bottom: 1.6rem;
+      }
+    }
 
     &::before {
       @include ba(0, 0) {
@@ -28,30 +71,94 @@
       position: absolute;
       top: 100%;
       left: calc(50% - 1.6rem);
+
+      @include respond(phone) {
+        display: none;
+      }
     }
 
     &-new-york {
       position: absolute;
       top: 9rem;
       left: 17rem;
+
+      @include respond(tablet) {
+        left: 8.5rem;
+      }
+
+      @include respond(phone) {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        background: rgba(252, 183, 43, 0.15);
+        font-size: 2.4rem;
+        line-height: 2.8rem;
+      }
     }
 
     &-london {
       position: absolute;
       top: 3.4rem;
       left: 43.4rem;
+
+      @include respond(tablet) {
+        left: 25.4rem;
+      }
+
+      @include respond(phone) {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        background: rgba(252, 183, 43, 0.15);
+        font-size: 2.4rem;
+        line-height: 2.8rem;
+      }
     }
 
     &-jakarta {
       position: absolute;
       bottom: 22rem;
       right: 18rem;
+
+      @include respond(tablet) {
+        right: 8.5rem;
+      }
+
+      @include respond(phone) {
+        position: relative;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        text-align: center;
+        background: rgba(252, 183, 43, 0.15);
+        font-size: 2.4rem;
+        line-height: 2.8rem;
+      }
     }
 
     &-yokohama {
       position: absolute;
       top: 10rem;
       right: 10.7rem;
+
+      @include respond(tablet) {
+        right: 3.7rem;
+      }
+
+      @include respond(phone) {
+        position: relative;
+        top: 0;
+        right: 0;
+        width: 100%;
+        text-align: center;
+        background: rgba(252, 183, 43, 0.15);
+        font-size: 2.4rem;
+        line-height: 2.8rem;
+      }
     }
   }
 }

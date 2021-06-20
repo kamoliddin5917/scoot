@@ -5,6 +5,7 @@
 @import './abstracts/mixins';
 @import './abstracts/extends';
 @import './abstracts/visually-hidden';
+@import './abstracts/container';
 // Base
 @import './base/base';
 @import './base/typography';
@@ -22,6 +23,7 @@
 @import './layout/footer';
 @import './layout/forms';
 @import './layout/list';
+@import './layout/modal';
 
 // PAGES
 @import './pages/home';

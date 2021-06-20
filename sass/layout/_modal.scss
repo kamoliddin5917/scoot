@@ -1,0 +1,122 @@
+.modal {
+  visibility: hidden;
+  opacity: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, .75);
+  margin-top: 7.5rem;
+
+  transform: translateX(-100%);
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  z-index: 22;
+
+  &__body {
+    width: 70%;
+    height: 100vh;
+    padding: 6.4rem 0 2.4rem 5rem;
+    background: #333A44;
+  }
+
+  &__navbar {
+    margin-bottom: 25rem;
+  }
+
+  &__list {
+    @include respond(phone) {
+      list-style: none;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 2.4rem;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    display: inline-block;
+    font-family: "Space Mono", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+    color: $color-light-grey;
+
+
+  }
+}
+
+.label {
+  display: none;
+  position: absolute;
+  left: 0;
+
+  @include respond(phone) {
+    display: block;
+  }
+
+  cursor: pointer;
+
+  &__span {
+    display: inline-block;
+    width: 2rem;
+    height: .4rem;
+    background-color: $color-yellow;
+    position: relative;
+
+    &::before,
+    &::after {
+      @include ba(2rem, .4rem) {
+        position: absolute;
+        background-color: $color-yellow;
+      }
+    }
+
+    &::before {
+      left: 0;
+      top: -.7rem;
+    }
+
+    &::after {
+      left: 0;
+      bottom: -.7rem;
+    }
+  }
+}
+
+.input {
+  display: none;
+
+
+  &:checked+.label .label__span {
+    visibility: hidden;
+
+  }
+
+  &:checked+.label .label__span::before {
+    visibility: visible;
+    top: 0;
+    transform: rotate(135deg);
+    transition: all .2s;
+
+  }
+
+  &:checked+.label .label__span::after {
+    visibility: visible;
+    bottom: 0;
+    transform: rotate(-135deg);
+    transition: all .2s;
+
+  }
+
+  &:checked~.modal {
+    visibility: visible;
+    opacity: 1;
+
+    transform: translateX(0);
+    transition: all .4s cubic-bezier(.55, .86, .65, 1.95);
+  }
+}

@@ -15,19 +15,36 @@
 <body>
   <header class="header">
     <div class="container">
-      <a href="#">
+      <a class="header__logo" href="#">
         <svg class="logo">
           <use xlink:href="./images/img.svg#scoot"></use>
         </svg>
       </a>
-      <nav class="navbar">
-        <ul class="navbar__ul navbar__ul-none">
+      <nav class="navbar navbar--none">
+        <ul class="navbar__ul">
           <li class="navbar__list"><a href="#" class="navbar__link">About</a></li>
           <li class="navbar__list"><a href="#" class="navbar__link">Location</a></li>
           <li class="navbar__list"><a href="#" class="navbar__link">Careers</a></li>
         </ul>
       </nav>
       <a href="#" class="btn btn--header">Get Scootin</a>
+
+      <input class="input" type="checkbox" id="checkbox">
+      <label class="label" for="checkbox">
+        <span class="label__span"></span>
+      </label>
+      <div class="modal">
+        <div class="modal__body">
+          <nav class="modal__navbar">
+            <ul class="modal__ul">
+              <li class="modal__list"><a href="#" class="modal__link">About</a></li>
+              <li class="modal__list"><a href="#" class="modal__link">Location</a></li>
+              <li class="modal__list"><a href="#" class="modal__link">Careers</a></li>
+            </ul>
+          </nav>
+          <a href="#" class="btn--modal">Get Scootin</a>
+        </div>
+      </div>
     </div>
   </header>
 
@@ -171,12 +188,12 @@
 
         <div class="footer__imgs">
           <a href="#" class="footer__img">
-            <img src="./images/appstore.png" srcset="./images/appstore.png 1x, ./images/appstore.png@2x 2x" alt="apple"
+            <img src="./images/appstore.png" srcset="./images/appstore.png 1x, ./images/appstore@2x.png 2x" alt="apple"
               class="footer__img-app">
           </a>
 
           <a href="#" class="footer__img">
-            <img src="./images/googleplay.png" srcset="./images/googleplay.png 1x, ./images/googleplay.png@2x 2x"
+            <img src="./images/googleplay.png" srcset="./images/googleplay.png 1x, ./images/googleplay@2x.png 2x"
               alt="google" class="footer__img-google">
           </a>
         </div>

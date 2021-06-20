@@ -1,6 +1,10 @@
 .box {
   margin-bottom: 14rem;
 
+  @include respond(phone) {
+    margin-bottom: 12rem;
+  }
+
   &__list {
     padding: 6.6rem 0;
     background-image: url(../images/arrow-left.png), url(../images/jek.png), url(../images/circle-spare.png);
@@ -15,8 +19,29 @@
         url(../images/circle-spare@2x.png);
     }
 
+    @include respond(tablet) {
+      padding: 50.1rem 0 0 0;
+      background-position: right calc(0% + 30rem),
+        calc(100% - 16.5rem) top,
+        calc(100% + calc(44.5rem - 10.1rem)) top;
+    }
+
+    @include respond(phone) {
+      background-image: url(../images/arrow-left.png),
+        url(../images/jek.png);
+      background-position: calc(100% + 27rem) calc(0% + 17rem),
+        top center;
+      background-size: 74rem 14rem,
+        31.1rem 31.1rem;
+      padding: 36.7rem 0 0 0;
+    }
+
     &:not(:last-child) {
       margin-bottom: 16rem;
+
+      @include respond(phone) {
+        margin-bottom: 12rem;
+      }
     }
 
     &:nth-child(2) {
@@ -32,6 +57,21 @@
           url(../images/circle-spare@2x.png);
       }
 
+      @include respond(tablet) {
+        background-position: calc(0% - 9rem) top,
+          calc(0% + 16.5rem) top,
+          calc(0% - calc(44.5rem - 10.1rem)) top;
+      }
+
+      @include respond(phone) {
+        background-image: url(../images/arrow-right.png),
+          url(../images/shahar.png);
+        background-position: calc(100% - 23rem) top,
+          top center;
+        background-size: 48rem 19.8rem,
+          31.1rem 31.1rem;
+        padding: 36.7rem 0 0 0;
+      }
     }
 
     &:nth-child(3) {
@@ -53,7 +93,21 @@
           url(../images/circle-spare@2x.png);
       }
 
+      @include respond(tablet) {
+        background-position: calc(100% + 38rem) calc(0% + 9rem),
+          calc(100% - 16.5rem) top,
+          calc(100% + calc(44.5rem - 10.1rem)) top;
+      }
 
+      @include respond(phone) {
+        background-image: url(../images/arrow-left.png),
+          url(../images/jek-many.png);
+        background-position: calc(100% + 29rem) top,
+          top center;
+        background-size: 64rem 16.8rem,
+          31.1rem 31.1rem;
+        padding: 36.7rem 0 0 0;
+      }
     }
 
     &-about-1 {
@@ -61,6 +115,16 @@
       background-image: url(../images/arrow-left-2.png),
         url(../images/malika.png),
         url(../images/circle-spare.png);
+
+      @include respond(tablet) {
+        padding: 51.1rem 0 0 0;
+      }
+
+      @include respond(phone) {
+        padding: 36.7rem 0 0 0;
+        background-image: url(../images/arrow-left-2.png),
+          url(../images/malika.png);
+      }
     }
 
     &-about-2 {
@@ -68,6 +132,16 @@
       background-image: url(../images/arrow-right.png),
         url(../images/bus.png),
         url(../images/circle-spare.png) !important;
+
+      @include respond(tablet) {
+        padding: 51.1rem 0 0 0;
+      }
+
+      @include respond(phone) {
+        padding: 36.7rem 0 0 0;
+        background-image: url(../images/arrow-right.png),
+          url(../images/bus.png) !important;
+      }
     }
 
     &-careers {
@@ -81,6 +155,12 @@
           url(../images/jek-and-malika@2x.png),
           url(../images/circle-spare@2x.png);
       }
+
+      @include respond(phone) {
+        background-image: url(../images/arrow-left.png),
+          url(../images/jek-and-malika.png);
+
+      }
     }
   }
 
@@ -88,8 +168,30 @@
   &__text {
     width: 44.5rem;
 
+    @include respond(tablet) {
+      width: 57.3rem;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    @include respond(phone) {
+      width: 100%;
+    }
+
     &-2 {
       margin-left: auto;
+    }
+
+    & .h2 {
+      @include respond(tablet) {
+        width: 45.7rem;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      @include respond(phone) {
+        width: 100%;
+      }
     }
   }
 
@@ -98,9 +200,24 @@
     margin-top: 10.3rem;
     margin-bottom: 12rem;
 
+    @include respond(tablet) {
+      flex-direction: column;
+    }
+
+    @include respond(phone) {
+      margin-top: 6.4rem;
+      margin-bottom: 14.5rem;
+    }
+
     &__list {
       width: 35rem;
       list-style: none;
+
+      &:not(:last-child) {
+        @include respond(tablet) {
+          margin-bottom: 50px;
+        }
+      }
     }
 
     &__link {
@@ -117,6 +234,10 @@
           (min-width:2000px) {
             background-image: url(../images/phone-2@2x.png);
           }
+        }
+
+        @include respond(phone) {
+          margin-bottom: 6.4rem;
         }
       }
 

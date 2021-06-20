@@ -2,8 +2,22 @@
   margin-top: 16rem;
   margin-bottom: 20rem;
 
+  @include respond(tablet) {
+    margin-top: 12.2rem;
+    margin-bottom: 14.5rem;
+  }
+
+  @include respond(phone) {
+    margin-top: 12rem;
+    margin-bottom: 12rem;
+  }
+
   & .container {
     @extend %jsb;
+
+    @include respond(tablet) {
+      flex-direction: column;
+    }
   }
 }
 
@@ -13,9 +27,27 @@
 
   position: relative;
 
+  @include respond(tablet) {
+    &:not(:last-child) {
+      margin-bottom: 4rem;
+    }
+  }
+
+  @include respond(phone) {
+    text-align: center;
+  }
+
   &-body {
     width: 35rem;
     display: inline-block;
+
+    @include respond(tablet) {
+      width: 39.8rem;
+    }
+
+    @include respond(phone) {
+      width: 100%;
+    }
   }
 
   &::before {
@@ -33,6 +65,16 @@
 
     position: relative;
     z-index: 2;
+
+    @include respond(tablet) {
+      margin-right: 7.9rem;
+      margin-bottom: 2.5rem;
+    }
+
+    @include respond(tablet) {
+      margin-right: 0;
+      margin-bottom: 2.4rem;
+    }
   }
 
   &::after {
@@ -45,6 +87,17 @@
     right: 98%;
 
     z-index: 1;
+
+    @include respond(tablet) {
+      top: -89%;
+      width: 1.5rem;
+      height: 100%;
+      right: calc(100% - 56px);
+    }
+
+    @include respond(phone) {
+      display: none;
+    }
   }
 
   &:nth-child(2) {
@@ -74,12 +127,29 @@
   &-about {
     list-style: none;
 
+    @include respond(tablet) {
+      width: 100%;
+    }
+
     &__list {
       background-color: $color-snow;
       width: 73rem;
+      transition: all.2s ease-in-out;
+
+      @include respond(tablet) {
+        width: 100%;
+      }
+
+      &:hover {
+        background-color: $color-light-yellow;
+      }
 
       &:not(:last-child) {
         margin-bottom: 1.6rem;
+
+        @include respond(tablet) {
+          margin-bottom: 2.4rem;
+        }
       }
     }
   }
@@ -89,6 +159,10 @@
     cursor: pointer;
     display: inline-block;
     width: 100%;
+
+    @include respond(phone) {
+      padding: 32px;
+    }
   }
 
   &__input {

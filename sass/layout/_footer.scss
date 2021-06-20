@@ -12,8 +12,20 @@
       background-image: url(../images/bg-footer@2x.png);
     }
 
+    @include respond(tablet) {
+      padding: 6.2rem 0;
+    }
+
+    @include respond(phone) {
+      padding: 8.8rem 0;
+    }
+
     & .container {
       @extend %jsb;
+
+      @include respond(tablet) {
+        flex-direction: column
+      }
     }
   }
 
@@ -26,18 +38,32 @@
 
     &:not(:last-child) {
       margin-right: 1.8rem;
+
+      @include respond(tablet) {
+        margin-right: 1.3rem;
+      }
     }
 
     &-app {
       display: inline-block;
       width: 15.9rem;
       height: 5.6rem;
+
+      @include respond(phone) {
+        width: 11.4rem;
+        height: 4rem;
+      }
     }
 
     &-google {
       display: inline-block;
       width: 18.2rem;
       height: 5.6rem;
+
+      @include respond(phone) {
+        width: 13rem;
+        height: 4rem;
+      }
     }
   }
 
@@ -45,8 +71,16 @@
     background-color: #333A44;
     padding: 3.5rem 0;
 
+    @include respond(phone) {
+      padding: 6.4rem 0 8.8rem 0;
+    }
+
     & .container {
       @extend %aligncenter;
+
+      @include respond(phone) {
+        flex-direction: column;
+      }
     }
 
     &-img {
@@ -65,4 +99,9 @@
   width: 2.4rem;
   height: 2.4rem;
   color: $color-yellow;
+  transition: all .2s ease-in-out;
+
+  &:hover {
+    color: #E5ECF4;
+  }
 }

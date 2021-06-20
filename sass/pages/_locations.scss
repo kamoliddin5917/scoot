@@ -6,13 +6,27 @@
   &__img {
     width: 100%;
     height: 54.2rem;
+
+    @include respond(phone) {
+      height: 15.2rem;
+      margin-bottom: 4rem;
+    }
   }
 
   &-text {
     margin: 12rem 0;
 
+    @include respond(phone) {
+      margin: 7.2rem 0;
+    }
+
     & .container {
       @extend %jsb;
+
+      @include respond(tablet) {
+        flex-direction: column;
+        text-align: center;
+      }
     }
   }
 
